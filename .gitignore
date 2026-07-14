@@ -48,6 +48,10 @@ next-env.d.ts
 # ---- Runtime data (local only) ----
 backend/storage/
 backend/logs/
+backend/debug/
+backend/error_trace.txt
+backend/register.json
+backend/test.json
 storage/
 logs/
 tmp/
