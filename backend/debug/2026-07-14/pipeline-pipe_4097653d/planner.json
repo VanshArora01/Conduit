@@ -1,0 +1,8 @@
+{
+  "intent": "DOCUMENT",
+  "response_mode": "KNOWLEDGE_ONLY",
+  "tools": [
+    "retrieval"
+  ],
+  "rewritten_query": "Vansh Arora MAD Synopsis key points"
+}

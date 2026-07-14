@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
+  
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  
+  --color-muted: var(--muted);
+  --color-muted-fg: var(--muted-fg);
+}
+
+@layer base {
+  :root {
+    /* Deep Monochromatic Theme */
+    --background: #0A0A0A;
+    --foreground: #EDEDED;
+    
+    --surface: #111111;
+    --surface-hover: #1A1A1A;
+    --surface-active: #222222;
+    --surface-raised: #1A1A1A;
+    --surface-raised-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+    
+    --border: #222222;
+    --border-strong: #333333;
+    
+    --accent: #EDEDED;
+    --accent-fg: #0A0A0A;
+    
+    --muted: #171717;
+    --muted-fg: #A1A1AA;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Dense Typography */
+  .text-dense-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-dense-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-dense-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .text-dense-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar for dense lists */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-fg);
+}
